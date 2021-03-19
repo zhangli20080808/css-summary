@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>box-shadow盒子阴影</title>
+    <style>
+        .box1{
+            width: 300px;
+            height: 300px;
+            background-color: burlywood;
+            /* 1个值：x轴  - 水平  0    正值   大 -  右     负值   大 - 左
+               2个值：y轴  - 垂直  0
+               3个值  模糊半径
+               4个值  模糊半径 -   扩展
+               5个值  颜色    -  透明度   rgba(0,0,0,.5)   [0-1]    rgb(0,0,0)  黑色
+               6个值  inset  内阴影
+            */
+            box-shadow: 10px 10px 10px 0 red;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+
+    <div class="box2"></div>
+
+    <div class="box3"></div>
+
+    <div class="box4"></div>
+</body>
+</html>

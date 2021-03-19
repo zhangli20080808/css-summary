@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>background-size背景尺寸</title>
+    <style>
+      .box1{
+        width: 400px;
+        height: 400px;
+        background:#000 url(images/1.png) no-repeat;
+        background-size: 100px 100px;
+      }
+      .box2{
+        float: left;
+        margin:20px;
+        width: 400px;
+        height: 600px;
+        background:#000 url(images/eagle.jpg) no-repeat;
+        /* 裁剪 */
+        background-size: cover;
+      }
+      .box3{
+        float: left;
+        margin:20px;
+        width: 400px;
+        height: 600px;
+        background:#000 url(images/eagle.jpg) no-repeat;
+        /* 留白 */
+        background-size: contain;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box1"></div>
+
+    <div class="box2"></div>
+
+    <div class="box3"></div>
+
+    <div class="box4"></div>
+  </body>
+</html>

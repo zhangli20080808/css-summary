@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>linear-gradient线性渐变</title>
+        <style>
+        .box1{
+            float: left;
+            width: 200px;
+            height: 200px;
+            margin:20px;
+            /* background: red; */
+            background:linear-gradient(red,green);
+        }
+
+        .box2{
+            float: left;
+            width: 200px;
+            height: 200px;
+            margin:20px;
+            background:linear-gradient(to left,red,green);
+        }
+
+        .box3{
+            float: left;
+            width: 200px;
+            height: 200px;
+            margin:20px;
+            background:linear-gradient(to left top,red,green,blue);
+        }
+
+        .box4{
+            float: left;
+            width: 200px;
+            height: 200px;
+            margin:20px;
+            background:linear-gradient(45deg,red,green);
+        }
+        
+    </style>
+    </head>
+    <body>
+        <!-- 颜色A - B 渐变 -->
+        <div class="box1"></div>
+
+        <!-- 颜色A - B 渐变(带一个方位) -->
+        <div class="box2"></div>
+
+        <!-- 颜色A - B 渐变(带多个方位) -->
+        <div class="box3"></div>
+
+        <!-- 颜色A - B 渐变(带角度) -->
+        <div class="box4"></div>
+    </body>
+</html>

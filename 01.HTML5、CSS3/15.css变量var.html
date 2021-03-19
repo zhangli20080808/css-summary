@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 300px;
+            height: 400px;
+            /* 定义 */
+            --bg:#000;
+            /* 调用 - 默认参数 */
+            background:var(--bg1,red);
+           --fs:100;  
+           /* 数字后面不能直接写单位px */
+           /* font-size:var(--fs)px; */
+           font-size:calc(var(--fs)*1px);
+           color:#fff;
+
+        }
+    </style>
+</head>
+<body>
+    <div>变量</div>
+</body>
+</html>
