@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>定位常见值及原理</title>
+    <style>
+        *{margin:0;padding:0;}
+        div{width: 200px;height: 200px;margin:20px;}
+        div:nth-child(1){background-color: gray;}
+        div:nth-child(2){background-color: green;}
+        div:nth-child(3){background-color: blueviolet;}
+        div:nth-child(4){background-color: olive;}
+        div:nth-child(5){background-color: greenyellow;}
+
+        .static{position: static;top:20px;}
+        /* 参照物 - 基点: 它原来的位置 自己本身  不会脱离文档流 */
+        .relative{position: relative;top:40px;}
+
+        /* 参照物 - 基点: 父元素 - position  
+        没有 - html浏览器窗口 
+        有  - 父元素  position
+        会脱离文档流
+        */
+        .absolute{position: absolute;top:10px;}
+
+        .fixed{
+            /* 参照物-基点: 浏览器窗口   
+            会脱离文档流 -  滚动条滚动  固定不动
+            */
+            position: fixed;
+        }
+    </style>
+</head>
+<body>
+    <!-- static默认值 -->
+    <div class="static">static默认值</div>
+
+    <!-- relative相对定位 -->
+    <div class="relative">relative相对定位</div>
+
+    <!-- absolute绝对定位 -->
+    <div class="absolute">absolute绝对定位</div>
+
+    <!-- fixed固定定位 -->
+    <div class="fixed">fixed固定定位</div>
+
+     <!-- sticky粘连定位 -->
+     <div class="sticky">sticky粘连定位</div>
+
+     <div style="height:400px;"></div>
+</body>
+</html>

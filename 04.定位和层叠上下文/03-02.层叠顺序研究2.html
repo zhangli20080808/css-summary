@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+        层叠上下文元素:  
+        1.html  根层叠上下文元素
+        2.定位属性  - z-index为数值    .box1,.box2   => html层叠上下里面
+
+        
+        p1元素  在  box1 层叠上下文元素里面
+        p2元素  在  box2 层叠上下文元素里面
+
+        层叠上下文具有整体性
+        
+        */
+        .box1{
+            width: 200px;
+            height: 200px;
+            background-color: hotpink;
+            position: relative;
+            z-index: 1;
+        }
+        .box2{
+            width: 200px;
+            height: 200px;
+            background-color: gold;
+            position: relative;
+            z-index: 2;
+            top: -114px;
+            left: 40px;
+        }
+        .box1 p{
+            width: 100px;
+            height: 100px;
+            background-color: green;
+            position: absolute;
+            z-index: 999;
+        }
+        .box2 p{
+            width: 100px;
+            height: 100px;
+            background-color: greenyellow;
+            position: absolute;
+            z-index: -999;
+        }
+    </style>
+</head>
+<body>
+    <!-- z-index:1 -->
+    <div class="box1">
+        <p>999</p>
+    </div>
+
+    <!-- z-index:2 -->
+    <div class="box2">  
+        <p>-999</p>
+    </div>
+</body>
+</html>

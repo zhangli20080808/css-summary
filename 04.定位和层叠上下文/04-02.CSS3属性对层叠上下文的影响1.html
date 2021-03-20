@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS3属性对层叠上下文的影响1</title>
+        <style type="text/css">
+/* 
+层叠上下文元素:  
+html、child  + parent
+parent  其实就是一个普通的块元素   块元素   >   定位  z-index:-1
+
+
+*/
+
+        /* 案例一分解 */
+        .box{
+            display: flex;
+        }
+        .parent{
+            width: 200px;
+            height: 100px;
+            background: #168bf5;
+            z-index: 1;
+        }
+        .child{
+            width: 100px;
+            height: 200px;
+            margin-top:-20px;
+            background: #32d19c;
+            position: relative;
+            z-index: -1;
+        }
+        </style>
+    </head>
+    <body>
+        <!-- 案例一分解:display:flex/inline-flex; -->
+        <div class="box">
+            <div class="parent">
+                parent
+                <div class="child">child</div>
+            </div>
+        </div>
+    </body>
+</html>

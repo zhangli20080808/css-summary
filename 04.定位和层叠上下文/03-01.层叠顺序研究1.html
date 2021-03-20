@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+      /* html  根层叠上下文  目前我们的层叠上下文研究的范围是在根
+      层叠上下文的元素  -  html
+
+      层叠顺序  -
+      背景或边框  < z-index负值 <  块级元素  <  浮动元素  < 行内、行内块元素  <  position z-index:auto/0    <    position z-index正值
+      */
+      html {
+          background-color: red;
+      }
+
+      /* 块级元素  div*/
+      .box {
+          width: 200px;
+          height: 200px;
+          background-color: green;
+      }
+
+      /* 浮动元素 */
+      .box1 {
+          width: 200px;
+          height: 200px;
+          background-color: gold;
+          float: left;
+          margin-top: -20px;
+          margin-left: 20px;
+      }
+
+      /* 行内、行内块元素 */
+      .box2 {
+          display: inline-block;
+          width: 300px;
+          height: 300px;
+          background-color: blue;
+          margin-left: -20px;
+
+      }
+
+      .box3 {
+          width: 300px;
+          height: 300px;
+          background-color: green;
+          position: relative;
+          margin-left: 20px;
+          margin-top: -20px;
+
+      }
+
+      .box4 {
+          width: 300px;
+          height: 300px;
+          background-color: orange;
+          position: relative;
+          z-index: 1;
+          margin-top: -20px;
+          margin-left: 30px;
+      }
+  </style>
+</head>
+<body>
+
+<div class="box"></div>
+<div class="box1"></div>
+<div class="box2"></div>
+<div class="box3"></div>
+<div class="box4"></div>
+
+</body>
+</html>
