@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 2000  *  312   10个僵尸 */
+   .box{
+     width: 200px;
+     height: 312px;
+     background: url(sprites/jiangshi1.png) no-repeat; 
+     animation: move 1s steps(10) infinite;
+   }
+   /* 第二种写法 简化关键帧   把关键帧进行分段*/
+   @keyframes move{
+      0%{
+        background-position: 0 0;
+      }
+      100%{
+        background-position: -2000px 0;
+      }
+   }
+
+  </style>
+</head>
+<body>
+  <div class="box"></div>
+</body>
+</html>

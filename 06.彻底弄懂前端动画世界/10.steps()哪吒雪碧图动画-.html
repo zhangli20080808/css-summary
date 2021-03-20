@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 1800m  320   6个等分*/
+    .naza{
+      width: 300px;
+      height: 320px;
+      background: url(sprites/sprites.png) no-repeat;
+      animation: naza 1s  steps(6) infinite;
+    }
+    @keyframes naza{
+      0%{
+        background-position: 0 0;
+      }
+      100%{
+        /* 雪碧图: x   y */
+        background-position: -1800px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="naza"></div>
+</body>
+</html>

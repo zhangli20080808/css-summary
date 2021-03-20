@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+  .box{
+    width: 300px;
+    height: 300px;
+    background: #fff;
+    box-shadow: 0 3px 4px rgba(0,0,0,.5);
+    /* 过渡动画  translateY 0px  =  -5px */
+    transition: all 1s ease;
+  }
+  .box:hover{
+     transform: translateY(-25px);
+  }
+
+  /* 缩放 */
+  .pic{
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+  }
+  .pic img{
+    width: 200px;
+    height: 200px;
+    /* 元素默认属性的身上- 鼠标移入移出都有一个动画的效果 */
+   transition: all 1s ease;
+  }
+  .pic:hover img{
+    transform: scale(1.5);
+    
+  }
+
+  /* 旋转 */
+  .box1{
+    width: 200px;
+    height: 200px;
+    background-color: rebeccapurple;
+     transition: all 1s ease;
+  }
+  .box1:hover{
+    transform: rotate(45deg);
+  }
+  </style>
+</head>
+
+
+<!-- 
+  translate(x,y)  translateX()  translateY()
+  scale() 
+
+
+
+-->
+<body>
+  <div class="box"></div>
+
+
+  <div class="pic">
+    <img src="http://contentcms-bj.cdn.bcebos.com/cmspic/54f654da8c962beb91e66bd029146785.jpeg?x-bce-process=image/crop,x_0,y_0,w_2048,h_1114" alt="">
+  </div>
+
+
+  <div class="box1"></div>
+</body>
+
+</html>
